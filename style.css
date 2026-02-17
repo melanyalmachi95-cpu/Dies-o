@@ -74,7 +74,7 @@ body {
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   gap: 32px;
   align-items: center;
-  margin-bottom: 72px;
+  margin-bottom: 50px;
 }
 
 .hero-left {
@@ -111,6 +111,11 @@ body {
   opacity: 0.9;
   pointer-events: none;
   z-index: 1;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
 }
 
 .spline-hero-inner {
@@ -168,7 +173,7 @@ spline-viewer {
   gap: 12px;
 }
 
-.brand-mark {
+/*.brand-mark {
   width: 32px;
   height: 32px;
   border-radius: 999px;
@@ -186,7 +191,7 @@ spline-viewer {
   border-radius: 999px;
   background: #050510;
 }
-
+*/
 .brand-text {
   display: flex;
   flex-direction: column;
@@ -330,9 +335,23 @@ spline-viewer {
   margin-bottom: 18px;
 }
 
+.section-header-1{
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
 .section-title {
   font-size: 20px;
   font-weight: 600;
+}
+
+.section-title-1 {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
 }
 
 .section-kicker {
@@ -629,6 +648,12 @@ spline-viewer {
   transform: translateY(0);
 }
 
+.vidio {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 64px;
+}
+
 @keyframes floatInUp {
   from {
     opacity: 0;
@@ -685,6 +710,49 @@ spline-viewer {
 @media (max-width: 640px) {
   .page {
     padding-inline: 14px;
+  }
+
+  .services-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .image-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cta-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .button-primary,
+  .button-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 500px) {
+  .spline-hero-inner spline-viewer {
+    width: 100% !important;
+    height: 220px !important;
+    display: block;
+    min-width: 0;
+    min-height: 120px;
+  }
+
+  .vidio iframe {
+    width: 100% !important;
+    height: 200px !important;
+  }
+
+  .page {
+    padding-inline: 11px;
   }
 
   .services-grid {
